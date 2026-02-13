@@ -1,19 +1,17 @@
 import java.util.Scanner;
 
-// ---------------- ABSTRACT CLASS (Abstraction) ----------------
 abstract class Person {
     protected String name;
     protected int id;
 
-    public Person(String name, int id) {   // Encapsulation through constructor
+    public Person(String name, int id) {  
         this.name = name;
         this.id = id;
     }
 
-    public abstract void showInfo();   // Abstraction
+    public abstract void showInfo();  
 }
 
-// ---------------- STUDENT CLASS (Inheritance + Overriding) ----------------
 class Student extends Person {
 
     public Student(String name, int id) {
@@ -21,12 +19,11 @@ class Student extends Person {
     }
 
     @Override
-    public void showInfo() {   // Polymorphism (Method Overriding)
+    public void showInfo() {   
         System.out.println("Student Name: " + name + ", ID: " + id);
     }
 }
 
-// ---------------- ROOM CLASS (Encapsulation) ----------------
 class Room {
     private int roomNumber;
     private boolean occupied;
@@ -56,7 +53,6 @@ class Room {
     }
 }
 
-// ---------------- HOSTEL CLASS (Encapsulation) ----------------
 class Hostel {
     private Room[] rooms = {
         new Room(101),
@@ -81,7 +77,6 @@ class Hostel {
     }
 }
 
-// ---------------- MAIN APP (Menu-driven) ----------------
 public class HostelApp {
     public static void main(String[] args) {
 
@@ -122,4 +117,5 @@ public class HostelApp {
             }
         }
     }
+
 }
